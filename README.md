@@ -17,4 +17,11 @@ Yes, I would. Since, "max message length" is a simpler feature unit test could b
 Running the puppeteer tests with "headless" set to true would mean that all tests are run without any browser UI. In that case, though the test results are same, the developer cannot see puppeteer actually make interactions with the application through the browser. 
 
 5. What would your beforeAll callback look like if you wanted to start from the settings page before every test case?
-
+```
+beforeAll(async () => {
+    await page.goto(baseURL);
+    const settingsButton = await page.$('header > img');
+    settingsButton.click();
+    await page.waitForTimeout(500);
+  });
+```
