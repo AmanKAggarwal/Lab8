@@ -1,4 +1,4 @@
-const baseURL = 'http://127.0.0.1:5500/'; // Updated URL to base/Lab8/ to run on local machine
+const baseURL = 'http://127.0.0.1:5500/'; // Updated URL to http://127.0.0.1:5500/Lab8/ to run on local machine
 describe('Basic user flow for SPA ', () => {
   beforeAll(async () => {
     await page.goto(baseURL);
